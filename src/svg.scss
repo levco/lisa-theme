@@ -1,0 +1,29 @@
+svg {
+  .bg-danger      { fill: #f6e6e6 !important; }
+  .bg-dark        { fill: $dark !important; }
+  .bg-faded, .bg-light { fill: $gray-100 !important; }
+  .bg-info        { fill: #edf0f5 !important; }
+  .bg-inverse     { fill: $dark !important; }
+  .bg-primary     { fill: $primary !important; }
+  .bg-secondary   { fill: $gray-200 !important; }
+  .bg-success     { fill: #dae6dc !important; }
+  .bg-transparent { fill: transparent !important; }
+  .bg-warning     { fill: #fef1e1 !important; }
+  .bg-white       { fill: #fff !important; }
+
+  .border-0       { stroke: none; }
+  .border         { stroke: $border-color; }
+  @each $color, $value in $theme-colors {
+    .border-#{$color} { stroke: $value !important; }
+  }
+  .border-white   { stroke: $white !important; }
+  
+  @each $color, $value in $theme-colors {
+    text.text-#{$color} { fill: $value !important; }
+  }
+  text.text-black-50 { fill: rgba($black, .5) !important; }
+  text.text-body     { fill: $body-color !important; }
+  text.text-muted    { fill: $text-muted !important; }
+  text.text-white    { fill: $white !important; }
+  text.text-white-50 { fill: rgba($white, .5) !important; }
+}
